@@ -27,7 +27,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   favplaces: {
-    type [String]
+    type: [String]
   },
   advice: {
     type: [String]
