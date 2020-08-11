@@ -6,7 +6,8 @@ const ProfileSchema = new mongoose.Schema({
     ref: 'user'
   },
   status: {
-    type: String
+    type: String,
+    required: true
   },
   rvtype: {
     type: String
@@ -15,7 +16,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   agerange: {
-    type: String
+    type: String,
   },
   bio: {
     type: String
@@ -40,6 +41,9 @@ const ProfileSchema = new mongoose.Schema({
       type: String
     },
     facebook: {
+      type: String
+    },
+    linkedin: {
       type: String
     },
     instagram: {
