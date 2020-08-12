@@ -27,9 +27,30 @@ const ProfileSchema = new mongoose.Schema({
   pets: {
     type: String
   },
-  favplaces: {
-    type: [String]
-  },
+  
+  favplaces:[ 
+    {
+    location: {
+      type: String,
+      
+    },
+    state: {
+      type: String,
+      
+    },
+    from: {
+      type: Date,
+      
+    },
+    to: {
+      type: Date,
+    },
+    description: {
+      type: String
+    }
+  }
+],
+
   advice: {
     type: [String]
   },
