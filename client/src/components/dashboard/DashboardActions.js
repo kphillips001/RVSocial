@@ -7,12 +7,12 @@ const DashboardActions = () => {
       <Link to='/edit-profile' className='btn btn-light'>
         <i className='fas fa-user-circle text-primary' /> Edit Profile
       </Link>
-      <Link to='/add-experience' className='btn btn-light'>
+      <Link to='/add-favplaces' className='btn btn-light'>
         <i className='fas fa-campground text-primary' /> Add Favorite Places to Camp
       </Link>
-      <Link to='/add-education' className='btn btn-light'>
+      {/* <Link to='/add-education' className='btn btn-light'>
         <i className='far fa-comment text-primary' /> Add Camping Advice
-      </Link>
+      </Link> */}
     </div>
   );
 };

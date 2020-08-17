@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 
-const CreateProfile = ({
+const EditProfile = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
@@ -23,6 +23,25 @@ const CreateProfile = ({
     website: ""
   });
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
+
+  useEffect(() => {
+    getCurrentProfile();
+
+    setFormData({
+      status: loading || !profile.status ? '' : profile.status,
+      rvtype: loading || !profile.rvtype ? '' : profile.rvtype,
+      wherefrom: loading || !profile.wherefrom ? '' : profile.wherefrom,
+      agerange: loading || !profile.agerange ? '' : profile.agerange,
+      bio: loading || !profile.bio ? '' : profile.bio,
+      twitter: loading || !profile.twitter ? '' : profile.twitter,
+      facebook: loading || !profile.facebook ? '' : profile.facebook,
+      youtube: loading || !profile.youtube ? '' : profile.youtube,
+      instagram: loading || !profile.instagram ? '' : profile.instagram,
+      website: loading || !profile.website ? '' : profile.website,
+    });
+
+  }, [loading, getCurrentProfile]);
+  
   const {
     status,
     rvtype,
@@ -35,12 +54,11 @@ const CreateProfile = ({
     instagram,
     website
   } = formData;
-
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
   const onSubmit = e => {
     e.preventDefault();
-    createProfile(formData, history);
+    createProfile(formData, history, true);
   };
   useEffect(() => {
     getCurrentProfile();
@@ -193,17 +211,18 @@ const CreateProfile = ({
     </>
   );
 };
-CreateProfile.propTypes = {
+
+EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  profile: state.profile
 });
 
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile },
-)(withRouter(CreateProfile));
+)(withRouter(EditProfile));
