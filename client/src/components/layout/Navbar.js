@@ -8,7 +8,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>RVers</Link>
+        <Link to='/profiles'>Rvers</Link>
       </li>
       <li>
         <Link to='/dashboard'>
@@ -43,7 +43,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='fas fa-caravan' /> RVers
+          <i className='fas fa-caravan' /> RV Social
         </Link>
       </h1>
       {!loading && (

@@ -1,10 +1,10 @@
-mport React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, withRouter, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 
-const Createprofile = ({
+const CreateProfile = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
@@ -15,7 +15,6 @@ const Createprofile = ({
     rvtype: "",
     wherefrom: "",
     agerange: "",
-    status: "",
     bio: "",
     twitter: "",
     facebook: "",
@@ -29,7 +28,6 @@ const Createprofile = ({
     rvtype,
     wherefrom,
     agerange,
-    status,
     bio,
     twitter,
     facebook,
@@ -50,14 +48,13 @@ const Createprofile = ({
   return loading && profile === null ? (
     <Redirect to='/dashboard' />
   ) : (
-    <Fragment>
+    <>
       <h1 className='large text-primary'>Create Your Profile</h1>
       <p className='lead'>
-        <i className='fas fa-user' /> Let's get some information to make your
-        profile stand out
+        <i className='fas fa-user' /> Let's get some information to create your RV Social Profile!
       </p>
       <small>* = required field</small>
-      <form className='form' onSubmit={e => onSubmit(e)}>
+      <form className='form' onSubmit={onSubmit}>
       <div className='form-group'>
           <select name='status' value={status} onChange={onChange}>
             <option value='0'>* Select Rver Status</option>
@@ -65,7 +62,6 @@ const Createprofile = ({
             <option value='Full-time Working'>Full-time Working</option>
             <option value='Vacationer'>Vacationer</option>
             <option value='Weekender'>Weekender</option>
-            <option value='Student or Learning'>Student or Learning</option>
            </select>
           <small className='form-text'>
             Give us an idea of what type of RV enthusiast you are!
@@ -73,7 +69,7 @@ const Createprofile = ({
         </div>
         <div className='form-group'>
           <select name='rvtype' value={rvtype} onChange={onChange}>
-            <option value='0'>* Select Rver Type</option>
+            <option value='0'>* Select RV Type</option>
             <option value='Class A Motorhome'>Class A Motorhome</option>
             <option value='Class C Motorhome'>Class C Motorhome</option>
             <option value='Class B Camper Van'>Class B Camper Van</option>
@@ -135,7 +131,7 @@ const Createprofile = ({
           <span>Optional</span>
         </div>
         {displaySocialInputs && (
-          <Fragment>
+          <>
             <div className='form-group social-input'>
               <i className='fab fa-facebook fa-2x' />
               <input
@@ -186,25 +182,27 @@ const Createprofile = ({
                 onChange={onChange}
               />
             </div>
-          </Fragment>
+          </>
         )}
         <input type='submit' className='btn btn-primary my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
         </Link>
       </form>
-    </Fragment>
+    </>
   );
 };
-Createprofile.propTypes = {
+CreateProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 };
+
 const mapStateToProps = state => ({
   profile: state.profile,
 });
+
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile },
-)(withRouter(Createprofile));
+)(withRouter(CreateProfile));
