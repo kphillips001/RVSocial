@@ -15,7 +15,9 @@ const CreateProfile = ({
     rvtype: "",
     wherefrom: "",
     agerange: "",
+    preference: "",
     bio: "",
+    activities: "",
     twitter: "",
     facebook: "",
     youtube: "",
@@ -28,7 +30,9 @@ const CreateProfile = ({
     rvtype,
     wherefrom,
     agerange,
+    preference,
     bio,
+    activities, 
     twitter,
     facebook,
     youtube,
@@ -107,6 +111,30 @@ const CreateProfile = ({
            </select>
           <small className='form-text'>
             What is your age range?
+          </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='Boon-docking or hookups?'
+            name='preference'
+            value={preference}
+            onChange={onChange}
+          />
+          <small className='form-text'>
+            Do you prefer to camp off the grid or in campgrounds with hookups?
+          </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='Hiking, canoeing, riding bikes, picnics, campfires, etc'
+            name='activities'
+            value={activities}
+            onChange={onChange}
+          />
+          <small className='form-text'>
+            Favorite activites to do while camping
           </small>
         </div>
         <div className='form-group'>

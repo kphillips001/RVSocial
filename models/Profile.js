@@ -21,6 +21,12 @@ const ProfileSchema = new mongoose.Schema({
   bio: {
     type: String
   },
+  preference: {
+    type: String
+  },
+  activities: {
+    type: [String]
+  },
   kids: {
     type: String
   },

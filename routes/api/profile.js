@@ -55,9 +55,10 @@ router.post(
       agerange,
       status,
       bio,
+      activities, 
       kids,
       pets, 
-      favplaces,
+      preference,
       youtube,
       facebook,
       twitter,
@@ -74,10 +75,12 @@ router.post(
     if (agerange) profileFields.agerange = agerange;
     if (status) profileFields.status = status;
     if (bio) profileFields.bio = bio;
+    if (activities) profileFields.activities = activities;
     if (kids) profileFields.kids = kids;
     if (pets) profileFields.pets = pets;
-    if (favplaces) {
-      profileFields.favplaces = favplaces.split(',').map(fav => fav.trim());
+    if (preference) profileFields.preference = preference;
+    if (activities) {
+      profileFields.activities = activities.split(',').map(acitivty => activity.trim());
     }
     
     // Build social object

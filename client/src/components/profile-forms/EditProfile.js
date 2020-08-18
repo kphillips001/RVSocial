@@ -15,7 +15,9 @@ const EditProfile = ({
     rvtype: "",
     wherefrom: "",
     agerange: "",
+    preference: "",
     bio: "",
+    activities: "",
     twitter: "",
     facebook: "",
     youtube: "",
@@ -32,7 +34,9 @@ const EditProfile = ({
       rvtype: loading || !profile.rvtype ? '' : profile.rvtype,
       wherefrom: loading || !profile.wherefrom ? '' : profile.wherefrom,
       agerange: loading || !profile.agerange ? '' : profile.agerange,
+      preference: loading || !profile.preference ? '' : profile.preference,
       bio: loading || !profile.bio ? '' : profile.bio,
+      activities: loading || !profile.activities ? '' : profile.activities,
       twitter: loading || !profile.twitter ? '' : profile.twitter,
       facebook: loading || !profile.facebook ? '' : profile.facebook,
       youtube: loading || !profile.youtube ? '' : profile.youtube,
@@ -48,6 +52,8 @@ const EditProfile = ({
     wherefrom,
     agerange,
     bio,
+    preference,
+    activities,
     twitter,
     facebook,
     youtube,
@@ -125,6 +131,30 @@ const EditProfile = ({
            </select>
           <small className='form-text'>
             What is your age range?
+          </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='Boon-docking or hookups?'
+            name='preference'
+            value={preference}
+            onChange={onChange}
+          />
+          <small className='form-text'>
+            Do you prefer to camp off the grid or in campgrounds with hookups?
+          </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='Hiking, canoeing, riding bikes, picnics, campfires, etc'
+            name='activities'
+            value={activities}
+            onChange={onChange}
+          />
+          <small className='form-text'>
+            Favorite activites to do while camping
           </small>
         </div>
         <div className='form-group'>
