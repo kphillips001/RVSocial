@@ -13,8 +13,6 @@ const AddFavPlaces = ({ addFavPlaces, history }) => {
     description: ""
   })
 
-  const [toDateDisabled, toggleDisabled] = useState(false);
-
   const { location, state, from, to, description } = formData;
 
   const onChange = e =>
@@ -48,17 +46,6 @@ const AddFavPlaces = ({ addFavPlaces, history }) => {
             value={state}
             onChange={onChange}
           />
-        <div className='form-group'>
-          <input 
-            type='text'
-            placeholder='Description'
-            value={description}
-            onChange={onChange}
-          />
-          <small className='form-text'>
-            Why is this one of your favorite places to camp?
-          </small>
-        </div>
         </div>
         <div className='form-group'>
           <h4>Date of Stay</h4>
@@ -73,10 +60,23 @@ const AddFavPlaces = ({ addFavPlaces, history }) => {
           <h4>Till Date</h4>
           <input
             type='date'
-            name='from'
-            value={from}
+            name='to'
+            value={to}
             onChange={onChange}
           />
+          <div className='form-group'>
+          <textarea 
+            placeholder='Description'
+            name='description'
+            cols='30'
+            rows='5'
+            value={description}
+            onChange={onChange}
+          />
+          <small className='form-text'>
+            Why is this one of your favorite places to camp?
+          </small>
+        </div>
         </div>
         <input type='submit' className='btn btn-primary my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
