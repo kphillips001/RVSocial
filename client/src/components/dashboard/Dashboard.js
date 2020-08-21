@@ -25,6 +25,7 @@ const Dashboard = ({
     {profile !== null ? (
       <>
         <DashboardActions />
+        
       </>
     ) : (
       <>
