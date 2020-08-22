@@ -34,7 +34,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   
-  favplaces:[ 
+  favplaces: [ 
     {
     location: {
       type: String,
@@ -42,11 +42,9 @@ const ProfileSchema = new mongoose.Schema({
     },
     state: {
       type: String,
-      
     },
     from: {
       type: Date,
-      
     },
     to: {
       type: Date,

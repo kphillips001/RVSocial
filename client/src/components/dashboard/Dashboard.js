@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
+import FavPlaces from './FavPlaces';
 import { getCurrentProfile } from '../../actions/profile';
 
 const Dashboard = ({ 
@@ -25,7 +26,7 @@ const Dashboard = ({
     {profile !== null ? (
       <>
         <DashboardActions />
-        
+        <FavPlaces favplaces={profile.favplaces} />
       </>
     ) : (
       <>

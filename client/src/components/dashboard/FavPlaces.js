@@ -1,20 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Moment from 'moment';
+import Moment from 'react-moment';
 import { connect } from 'react-redux';
+import { deleteFavPlaces } from '../../actions/profile';
 
-const FavPlaces = ({ favplaces }) => {
+const FavPlaces = ({ favplaces, deleteFavPlaces }) => {
   const favoritePlaces = favplaces.map(fav => (
-    <td key={fav._id}>
+    <tr key={fav._id}>
       <td>{fav.location}</td>
       <td>{fav.state}</td>
-      <td>
-        <Moment format='YYYY/MM/DD'>{fav.from}</Moment> - {''}
-        <Moment format='YYYY/MM/DD'>{fav.to}</Moment>
-      </td>
-      <button className='btn btn-danger'>Delete</button>
+    <td>
+      <Moment format='YYYY/MM/DD'>{fav.from}</Moment> - {''}
+      <Moment format='YYYY/MM/DD'>{fav.to}</Moment>
     </td>
-  ))
+    <td>
+      <button 
+        onClick={()=> deleteFavPlaces(fav._id) }
+        className='btn btn-danger'>
+         Delete
+      </button>
+    </td>
+    </tr>
+  ));
 
   return (
     <>
@@ -23,18 +30,19 @@ const FavPlaces = ({ favplaces }) => {
         <thead>
           <tr>
             <th>Location</th>
-            <th className='hide-sm'>State</th>
-            <th />
+            <th>State</th>
+            <th>Dates Stayed</th>
           </tr>
         </thead>
-        <tbody>{favplaces}</tbody>
+        <tbody>{favoritePlaces}</tbody>
       </table>
     </>
   )
 }
 
 FavPlaces.propTypes = {
-  favplaces: PropTypes.array.isRequired
-};
+  favplaces: PropTypes.array.isRequired,
+  deleteFavPlaces: PropTypes.func.isRequired
+}
 
-export default FavPlaces;
+export default connect(null, {deleteFavPlaces})(FavPlaces);
