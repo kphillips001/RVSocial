@@ -18,7 +18,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
   
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault();
     if(password !== password2) {
       setAlert('Passwords do not match', 'danger');
@@ -89,10 +89,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   );
 };
 
-const mapStateToProps = state => ({
+Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
 });
 
 export default connect(mapStateToProps, { setAlert, register }) (Register)

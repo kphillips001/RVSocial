@@ -25,13 +25,14 @@ const FavPlaces = ({ favplaces, deleteFavPlaces }) => {
 
   return (
     <>
-      <h2 className='my-2'>Favorite Places to Camp</h2>
+      <h2 className='my-2'>Favorite Places Where I Camped</h2>
       <table className='table'>
         <thead>
           <tr>
             <th>Location</th>
             <th>State</th>
             <th>Dates Stayed</th>
+            <th />
           </tr>
         </thead>
         <tbody>{favoritePlaces}</tbody>
