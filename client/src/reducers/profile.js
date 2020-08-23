@@ -3,14 +3,13 @@ import {
   PROFILE_ERROR,
   CLEAR_PROFILE,
   UPDATE_PROFILE,
-  GET_PROFILES,
+  GET_PROFILES
   
 } from '../actions/types';
 
 const initialState = {
   profile: null,
   profiles: [],
-  repos: [],
   loading: true,
   error: {}
 };
@@ -28,9 +27,9 @@ export default function(state = initialState, action) {
       };
     case GET_PROFILES:
      return {
-      ...state,
-      profiles: payload,
-      loading: false
+        ...state,
+        profiles: payload,
+        loading: false
       };
     case PROFILE_ERROR:
       return {
@@ -42,7 +41,6 @@ export default function(state = initialState, action) {
         return {
           ...state,
           profile: null,
-          repos: [],
           loading: false
         };
     default:

@@ -24,15 +24,15 @@ const ProfileSchema = new mongoose.Schema({
   preference: {
     type: String
   },
-  activities: {
-    type: [String]
-  },
-  kids: {
-    type: String
-  },
-  pets: {
-    type: String
-  },
+  // activities: {
+  //   type: [String]
+  // },
+  // kids: {
+  //   type: String
+  // },
+  // pets: {
+  //   type: String
+  // },
   
   favplaces: [ 
     {
@@ -55,9 +55,9 @@ const ProfileSchema = new mongoose.Schema({
   }
 ],
 
-  advice: {
-    type: [String]
-  },
+  // advice: {
+  //   type: [String]
+  // },
   social: {
     youtube: {
       type: String

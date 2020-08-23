@@ -82,8 +82,8 @@ const CreateProfile = ({
             <option value='Toy Hauler'>Toy Hauler</option>
             <option value='Travel Trailer'>Toy Hauler</option>
             <option value='Teardrop Camper'>Teardrop Camper</option>
-            <option value='Truck Camper'>Class B Camper Van</option>
-            <option value='Pop-up Camper'>Class B Camper Van</option>
+            <option value='Truck Camper'>Truck Camper</option>
+            <option value='Pop-up Camper'>Pop-up Camper</option>
            </select>
           <small className='form-text'>
             What kind of camper do you own?

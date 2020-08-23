@@ -8,7 +8,7 @@ import PrivateRoute from '../routing/PrivateRoute';
 import CreateProfile from '../../components/profile-forms/CreateProfile';
 import EditProfile from '../profile-forms/EditProfile';
 import AddFavPlaces from '../profile-forms/AddFavPlaces';
-import Profiles from '../../components/profiles/Profiles'
+import Profiles from '../../components/profiles/Profiles';
 
 const Routes = () => {
   return (
