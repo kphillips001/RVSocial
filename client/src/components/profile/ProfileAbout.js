@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ProfileAbout = ({ profile: {
   bio, 
-  favplaces, 
+  activities, 
   user: { name }
 }}) => {
   return (
@@ -15,11 +15,11 @@ const ProfileAbout = ({ profile: {
         <div className='line' />
       </>
     )}
-    <h2 className='text-primary'>Favorite Places to Camp</h2>
+    <h2 className='text-primary'>Favorite Camping Activities</h2>
     <div className='skills'>
-      {favplaces.map((fav, index) => (
+      {activities.map((activity, index) => (
         <div key={index} className='p-1'>
-           <i className='fas fa-campground' /> {fav.location}
+           <i className='fas fa-arrow-circle-right' /> {activity}
         </div>
       ))}
     </div>

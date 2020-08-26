@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
+import FavoritePlace from './FavoritePlace';
 import { getProfileById } from '../../actions/profile';
 
 const Profile = ({ 
@@ -34,6 +35,16 @@ const Profile = ({
               <div className='profile-grid my-1'>
                 <ProfileTop profile={profile} />
                 <ProfileAbout profile={profile} />
+                <div className='profile-exp bg-white p-2'>
+                  <h2 className='text-primary'>
+                    Favorite Places to Camp
+                    {profile.favplaces.length > 0 ? (<Fragment>
+                      {profile.favplaces.map(favplaces => (
+                        <FavoritePlace key={favplaces._id} favplaces={favplaces} />
+                      ))}
+                    </Fragment> ) : (<h4> No Favorite Places Added </h4> )}
+                  </h2>
+                </div>
               </div>
       </Fragment> )}
     </Fragment>
