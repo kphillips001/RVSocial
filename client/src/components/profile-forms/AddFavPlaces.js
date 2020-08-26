@@ -7,13 +7,14 @@ import { addFavPlaces } from '../../actions/profile';
 const AddFavPlaces = ({ addFavPlaces, history }) => {
   const [formData, setFormData] = useState({
     location: "",
+    city: "",
     state: "",
     from: "",
     to: "",
     description: ""
   })
 
-  const { location, state, from, to, description } = formData;
+  const { location, city, state, from, to, description } = formData;
 
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,6 +36,15 @@ const AddFavPlaces = ({ addFavPlaces, history }) => {
             placeholder='Location'
             name='location'
             value={location}
+            onChange={onChange}
+          />
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
+            placeholder='City'
+            name='city'
+            value={city}
             onChange={onChange}
           />
         </div>

@@ -187,6 +187,7 @@ router.put(
 
     const {
       location,
+      city,
       state,
       from,
       to,
@@ -195,6 +196,7 @@ router.put(
 
     const newFav = {
       location,
+      city,
       state, 
       from,
       to,

@@ -8,10 +8,11 @@ const FavPlaces = ({ favplaces, deleteFavPlaces }) => {
   const favoritePlaces = favplaces.map(fav => (
     <tr key={fav._id}>
       <td>{fav.location}</td>
+      <td>{fav.city} </td>
       <td>{fav.state}</td>
     <td>
-      <Moment format='YYYY/MM/DD'>{fav.from}</Moment> - {''}
-      <Moment format='YYYY/MM/DD'>{fav.to}</Moment>
+      <Moment format='MM/DD/YYYY'>{fav.from}</Moment> - {''}
+      <Moment format='MM/DD/YYYY'>{fav.to}</Moment>
     </td>
     <td>
       <button 
@@ -30,6 +31,7 @@ const FavPlaces = ({ favplaces, deleteFavPlaces }) => {
         <thead>
           <tr>
             <th>Location</th>
+            <th>City</th>
             <th>State</th>
             <th>Dates Stayed</th>
             <th />

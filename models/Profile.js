@@ -38,7 +38,9 @@ const ProfileSchema = new mongoose.Schema({
     {
     location: {
       type: String,
-      
+    },
+    city: {
+      type: String, 
     },
     state: {
       type: String,
