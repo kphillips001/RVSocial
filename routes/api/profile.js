@@ -81,7 +81,7 @@ router.post(
     if (pets) profileFields.pets = pets;
     if (preference) profileFields.preference = preference;
     if (activities) {
-      profileFields.activities = activities.split(',').map(acitivty => activity.trim());
+      profileFields.activities = activities.split(',').map(act => act.trim());
     }
     
     // Build social object

@@ -25,6 +25,7 @@ const CreateProfile = ({
     website: ""
   });
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
+  
   const {
     status,
     rvtype,
