@@ -19,7 +19,7 @@ const ProfileAbout = ({ profile: {
     <div className='skills'>
       {favplaces.map((fav, index) => (
         <div key={index} className='p-1'>
-          <i className='fas fa-check' /> {favplaces}
+           <i className='fas fa-campground' /> {fav.location}
         </div>
       ))}
     </div>
