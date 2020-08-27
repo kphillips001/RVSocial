@@ -64,8 +64,8 @@ const CreateProfile = ({
       <div className='form-group'>
           <select name='status' value={status} onChange={onChange}>
             <option value='0'>* Select Rver Status</option>
-            <option value='Full-time Retired'>Full-time Retired</option>
-            <option value='Full-time Working'>Full-time Working</option>
+            <option value='Full-time Retired RVer'>Full-time Retired RVer</option>
+            <option value='Full-time Working RVer'>Full-time Working RVer</option>
             <option value='Vacationer'>Vacationer</option>
             <option value='Weekender'>Weekender</option>
            </select>
@@ -81,7 +81,7 @@ const CreateProfile = ({
             <option value='Class B Camper Van'>Class B Camper Van</option>
             <option value='Fifth Wheeel Camper'>Fifth Wheeel Camper</option>
             <option value='Toy Hauler'>Toy Hauler</option>
-            <option value='Travel Trailer'>Toy Hauler</option>
+            <option value='Travel Trailer'>Travel Trailer</option>
             <option value='Teardrop Camper'>Teardrop Camper</option>
             <option value='Truck Camper'>Truck Camper</option>
             <option value='Pop-up Camper'>Pop-up Camper</option>
@@ -107,7 +107,7 @@ const CreateProfile = ({
             <option value='0'>* Select Your Age Range</option>
             <option value='Twenties'>Twenties</option>
             <option value='Thirties'>Thirties</option>
-            <option value='Fourties'>Fourties</option>
+            <option value='Fourties'>Forties</option>
             <option value='Fifty +'>Fifty +</option>
            </select>
           <small className='form-text'>

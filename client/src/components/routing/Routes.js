@@ -10,6 +10,7 @@ import EditProfile from '../profile-forms/EditProfile';
 import AddFavPlaces from '../profile-forms/AddFavPlaces';
 import Profiles from '../../components/profiles/Profiles';
 import Profile from '../../components/profile/Profile';
+import Posts from '../../components/posts/Posts';
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
         <PrivateRoute exact path='/create-profile' component={CreateProfile} />
         <PrivateRoute exact path='/edit-profile' component={EditProfile} />
         <PrivateRoute exact path='/add-favPlaces' component={AddFavPlaces} />  
+        <PrivateRoute exact path='/posts' component={Posts} />  
       </Switch>
     </section>
   )

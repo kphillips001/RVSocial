@@ -83,8 +83,8 @@ const EditProfile = ({
       <div className='form-group'>
           <select name='status' value={status} onChange={onChange}>
             <option value='0'>* Select Rver Status</option>
-            <option value='Full-time Retired'>Full-time Retired</option>
-            <option value='Full-time Working'>Full-time Working</option>
+            <option value='Full-time Retired Rver'>Full-time Retired Rver</option>
+            <option value='Full-time Working Rver'>Full-time Working Rver</option>
             <option value='Vacationer'>Vacationer</option>
             <option value='Weekender'>Weekender</option>
            </select>
@@ -100,10 +100,10 @@ const EditProfile = ({
             <option value='Class B Camper Van'>Class B Camper Van</option>
             <option value='Fifth Wheeel Camper'>Fifth Wheeel Camper</option>
             <option value='Toy Hauler'>Toy Hauler</option>
-            <option value='Travel Trailer'>Toy Hauler</option>
+            <option value='Travel Trailer'>Travel Trailer</option>
             <option value='Teardrop Camper'>Teardrop Camper</option>
-            <option value='Truck Camper'>Class B Camper Van</option>
-            <option value='Pop-up Camper'>Class B Camper Van</option>
+            <option value='Truck Camper'>Truck Camper</option>
+            <option value='Pop-up Camper'>Pop-up Camper</option>
            </select>
           <small className='form-text'>
             What kind of camper do you own?
