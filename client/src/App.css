@@ -74,6 +74,10 @@ img {
   color: var(--dark-color);
 }
 
+.italic {
+  font-style: italic;
+}
+
 /* Padding */
 .p {
   padding: 0.5rem;

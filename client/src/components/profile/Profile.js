@@ -37,14 +37,17 @@ const Profile = ({
                 <ProfileAbout profile={profile} />
                 <div className='profile-exp bg-white p-2'>
                   <h2 className='text-primary'>
-                    Favorite Places to Camp
-                    {profile.favplaces.length > 0 ? (<Fragment>
+                    Favorite Places to Camp </h2>
+                    {profile.favplaces.length > 0 ? (
+                    <Fragment>
                       {profile.favplaces.map(favplaces => (
                         <FavoritePlace key={favplaces._id} favplaces={favplaces} />
                       ))}
-                    </Fragment> ) : (<h4> No Favorite Places Added </h4> )}
-                  </h2>
-                </div>
+                    </Fragment> 
+                    ) : (
+                    <h4> No Favorite Places Added </h4> 
+                    )}
+                 </div>
               </div>
       </Fragment> )}
     </Fragment>
