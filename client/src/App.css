@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #bfbe7a;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -366,7 +366,7 @@ button {
 
 /* Profile Page */
 .profile-grid {
-  display: grid;
+  display: flexbox;
   grid-template-areas:
     'top top'
     'about about'
@@ -402,7 +402,7 @@ button {
   text-align: center;
 }
 
-.profile-about .skills {
+.profile-about .activities {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -561,7 +561,7 @@ button {
       'github';
   }
 
-  .profile-about .skills {
+  .profile-about .activities {
     flex-direction: column;
   }
 

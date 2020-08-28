@@ -17,7 +17,7 @@ const EditProfile = ({
     agerange: "",
     preference: "",
     bio: "",
-    activities: "",
+    activity: "",
     twitter: "",
     facebook: "",
     youtube: "",
@@ -53,7 +53,7 @@ const EditProfile = ({
     agerange,
     bio,
     preference,
-    activities,
+    activity,
     twitter,
     facebook,
     youtube,
@@ -149,8 +149,8 @@ const EditProfile = ({
           <input
             type='text'
             placeholder='Hiking, canoeing, riding bikes, picnics, campfires, etc'
-            name='activities'
-            value={activities}
+            name='activity'
+            value={activity}
             onChange={onChange}
           />
           <small className='form-text'>

@@ -17,7 +17,7 @@ const CreateProfile = ({
     agerange: "",
     preference: "",
     bio: "",
-    activities: "",
+    activity: "",
     twitter: "",
     facebook: "",
     youtube: "",
@@ -33,7 +33,7 @@ const CreateProfile = ({
     agerange,
     preference,
     bio,
-    activities, 
+    activity, 
     twitter,
     facebook,
     youtube,
@@ -130,8 +130,8 @@ const CreateProfile = ({
           <input
             type='text'
             placeholder='Hiking, canoeing, riding bikes, picnics, campfires, etc'
-            name='activities'
-            value={activities}
+            name='activity'
+            value={activity}
             onChange={onChange}
           />
           <small className='form-text'>
